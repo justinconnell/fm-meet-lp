@@ -1,0 +1,62 @@
+@use "functions" as f;
+@use "variables" as v;
+@use "mixins" as m;
+
+body {
+  line-height: 1.4;
+}
+
+h1 {
+  line-height: 1;
+  font-size: clamp(
+    f.rem(40),
+    1.971830985915493rem + 2.253521126760563vw,
+    f.rem(64)
+  );
+  font-family: v.$font-family;
+  margin: f.rem(48) auto;
+  margin-bottom: f.rem(30);
+  width: f.rem(290);
+
+  @include m.breakpoint(medium) {
+    color: red;
+  }
+
+  @include m.breakpoint(large) {
+    color: blue;
+  }
+}
+
+h2 {
+  font-size: clamp(
+    f.rem(32),
+    1.823943661971831rem + 0.7511737089201878vw,
+    f.rem(40)
+  );
+  font-family: v.$font-family;
+}
+
+p {
+  font-size: clamp(
+    f.rem(16),
+    0.9559859154929577rem + 0.18779342723004694vw,
+    f.rem(18)
+  );
+  font-family: v.$font-family;
+  color: v.$color-gray;
+  margin: f.em(30) f.em(24);
+  line-height: f.em(25);
+}
+
+a {
+  font-size: clamp(
+    f.rem(16),
+    0.9559859154929577rem + 0.18779342723004694vw,
+    f.rem(18)
+  );
+  font-family: v.$font-family;
+  font-weight: 900;
+  line-height: f.em(26);
+  color: v.$color-white;
+  text-decoration: none;
+}

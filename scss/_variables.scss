@@ -1,0 +1,27 @@
+$color-dark-cyan: #4d96a9;
+$color-cyan-hover: #71c0d4;
+$color-light-cyan: #8fe3f9;
+$color-dark-purple: #855fb1;
+$color-purple-hover: #b18bdd;
+$color-light-purple: #d9b8ff;
+$color-black: #28283d;
+$color-gray: #87879d;
+$color-white: #fafafa;
+
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("assets/fonts/red-hat-display-v19-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("assets/fonts/red-hat-display-v19-latin-900.woff2") format("woff2");
+}
+
+$font-family: "Red Hat Display", sans-serif;

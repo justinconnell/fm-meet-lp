@@ -1,0 +1,31 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+.btn {
+  display: inline-block;
+  padding: f.rem(16) f.rem(32);
+  border-radius: 50px;
+
+  &-primary {
+    padding: f.rem(16) f.rem(40);
+    background-color: v.$color-dark-cyan;
+  }
+
+  &-primary:hover,
+  &-primary:focus {
+    background-color: v.$color-cyan-hover;
+  }
+
+  &-secondary {
+    background-color: v.$color-dark-purple;
+  }
+
+  &-secondary:hover,
+  &secondary:focus {
+    background-color: v.$color-purple-hover;
+  }
+}
+
+.version {
+  color: v.$color-light-cyan;
+}

@@ -1,0 +1,21 @@
+@use "functions" as f;
+
+.wrapper {
+  background-image: url("/design/Mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: f.rem(375);
+  margin-inline: auto;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.cta {
+  margin: f.rem(32) auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: f.rem(16);
+  justify-items: center;
+  align-items: center;
+}
