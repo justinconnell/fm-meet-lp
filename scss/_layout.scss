@@ -1,6 +1,7 @@
 @use "functions" as f;
 
 .wrapper {
+  width: f.rem(375);
   background-image: url("/design/Mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;

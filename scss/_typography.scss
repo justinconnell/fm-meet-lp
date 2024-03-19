@@ -34,6 +34,8 @@ h2 {
     f.rem(40)
   );
   font-family: v.$font-family;
+  margin: f.rem(20) f.rem(24);
+  line-height: f.rem(38);
 }
 
 p {
@@ -59,4 +61,12 @@ a {
   line-height: f.em(26);
   color: v.$color-white;
   text-decoration: none;
+}
+
+.over-line {
+  text-transform: uppercase;
+  font-family: v.$font-family;
+  color: v.$color-dark-cyan;
+  letter-spacing: f.rem(4);
+  line-height: f.rem(28);
 }

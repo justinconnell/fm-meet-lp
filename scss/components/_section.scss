@@ -2,12 +2,22 @@
 @use "../functions" as f;
 
 .section {
-  margin: 32px auto;
-  width: 56px;
+  margin: f.rem(32) auto;
+  display: grid;
+  place-content: center;
+
+  &__separator {
+    width: f.rem(56);
+    height: f.rem(84);
+    background: linear-gradient(
+      to right,
+      transparent calc(50% - 1px),
+      v.$color-gray,
+      transparent calc(50% + 1px)
+    );
+  }
 
   &__number {
-    display: grid;
-    place-content: center;
     border: solid 1px v.$color-gray;
     border-radius: 100px;
     width: f.rem(56);
@@ -20,6 +30,7 @@
     font-family: v.$font-family;
     color: v.$color-gray;
     font-weight: 900;
-    margin-top: 114px;
+    display: grid;
+    place-content: center;
   }
 }

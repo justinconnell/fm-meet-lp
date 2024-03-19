@@ -1,0 +1,17 @@
+@use "../variables" as v;
+@use "../functions" as f;
+
+.gallery {
+  margin: f.rem(62) f.rem(24);
+  display: grid;
+  column-gap: f.rem(25);
+  row-gap: f.rem(24);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  &__img {
+    height: f.rem(143);
+    width: f.rem(151);
+    border-radius: 12px;
+  }
+}

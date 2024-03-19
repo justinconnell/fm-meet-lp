@@ -13,3 +13,10 @@
 img {
   display: block;
 }
+
+a,
+a:active,
+a:focus,
+a:visited {
+  outline: none;
+}
