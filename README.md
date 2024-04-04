@@ -11,8 +11,6 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 - [Development process](#development-process)
   - [Development tools](#development-tools)
   - [Tech stack](#tech-stack)
-  - [Coding standards](#coding-standards)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -37,15 +35,8 @@ Users should be able to:
 
 ### Development tools
 
+- Git - Version control
 - Vite - development build and workflow tool
-- Neovim - code editor leveraging lazyvim config
-- Terminal (iTerm2 supports fonts and colors required for a good user experience)
-- Tmux - Terminal multiplexer for session management and
-  supporting multiple terminal instances
-
-All the above tools allow for an efficient and ergonomic coding
-experience that allows me to leverage my experience working
-within a shell environment.
 
 ### Tech stack
 
@@ -60,16 +51,6 @@ build automation (such as transpiling and outputting SCSS to CSS).
 The same base tool set can be extended for more advanced use cases
 and development workflows as may be required in future -
 such as automated testing, bundling etc.
-
-### Coding standards
-
-- BEM CSS
-
-### Useful resources
-
-- [BEM](https://getbem.com/) - helped clarify how to implement the BEM standard.
-- [Fluid Typography](https://royalfig.github.io/fluid-typography-calculator/) -
-  calculate clamp function values.
 
 ## Author
 

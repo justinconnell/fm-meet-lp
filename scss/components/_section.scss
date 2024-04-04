@@ -2,7 +2,6 @@
 @use "../functions" as f;
 
 .section {
-  margin: f.rem(32) auto;
   display: grid;
   place-content: center;
 
@@ -12,13 +11,14 @@
     background: linear-gradient(
       to right,
       transparent calc(50% - 1px),
-      v.$color-gray,
+      v.$color-light-gray,
       transparent calc(50% + 1px)
     );
   }
 
   &__number {
-    border: solid 1px v.$color-gray;
+    border: solid 1px v.$color-light-gray;
+    background-color: v.$color-white;
     border-radius: 100px;
     width: f.rem(56);
     height: f.rem(56);

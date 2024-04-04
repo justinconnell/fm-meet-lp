@@ -1,4 +1,5 @@
 $color-dark-cyan: #4d96a9;
+$color-dark-cyan-rgba: rgba(77, 150, 169, 0.9);
 $color-cyan-hover: #71c0d4;
 $color-light-cyan: #8fe3f9;
 $color-dark-purple: #855fb1;
@@ -6,6 +7,7 @@ $color-purple-hover: #b18bdd;
 $color-light-purple: #d9b8ff;
 $color-black: #28283d;
 $color-gray: #87879d;
+$color-light-gray: #d8d8d8;
 $color-white: #fafafa;
 
 @font-face {
@@ -25,3 +27,5 @@ $color-white: #fafafa;
 }
 
 $font-family: "Red Hat Display", sans-serif;
+$font-weight-normal: 500;
+$font-weight-bold: 900;

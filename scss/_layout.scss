@@ -1,22 +1,282 @@
 @use "functions" as f;
+@use "mixins" as m;
+@use "variables" as v;
 
 .wrapper {
-  width: f.rem(375);
-  background-image: url("/design/Mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  width: f.rem(375);
-  margin-inline: auto;
-  text-align: center;
-  border: 1px solid red;
+  background-color: v.$color-white;
+  // background-image: url("design/Desktop.jpg");
+  // background-repeat: no-repeat;
+  // background-position: top center;
+  // background-size: cover;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  justify-items: start;
+  max-width: 768px;
+
+  @include m.breakpoint(desktop) {
+    max-width: 1440px;
+  }
+}
+
+.header {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  justify-items: start;
+
+  @include m.breakpoint(tablet) {
+    height: 140px;
+  }
+
+  @include m.breakpoint(desktop) {
+    height: 168px;
+  }
+}
+
+.logo {
+  margin-top: f.rem(48);
+
+  @include m.breakpoint(desktop) {
+    margin-top: f.rem(80);
+  }
+}
+
+.hero {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 48px;
+
+  @include m.breakpoint(tablet) {
+    gap: 72px;
+    margin-bottom: 16px;
+  }
+
+  @include m.breakpoint(desktop) {
+    gap: 20px;
+    grid-template-columns: 360px auto 360px;
+    grid-template-rows: 358px;
+    margin-bottom: 112px;
+  }
+
+  &__img {
+    width: calc(100% + 40px);
+    min-height: 153px;
+    object-position: -20px;
+
+    @include m.breakpoint(tablet) {
+      width: calc(100% + 50px);
+      min-height: 303px;
+      object-position: -25px;
+    }
+
+    @include m.breakpoint(desktop) {
+      display: none;
+    }
+
+    &--left {
+      display: none;
+
+      @include m.breakpoint(desktop) {
+        display: block;
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: end;
+      }
+    }
+
+    &--right {
+      display: none;
+
+      @include m.breakpoint(desktop) {
+        display: block;
+        grid-row: 1;
+        grid-column: 3;
+        justify-self: start;
+        align-self: self-end;
+      }
+    }
+  }
 }
 
 .cta {
-  margin: f.rem(32) auto;
+  justify-self: center;
+  text-align: center;
+  width: 327px;
+  margin-bottom: 32px;
+
+  @include m.breakpoint(tablet) {
+    width: 450px;
+  }
+
+  @include m.breakpoint(desktop) {
+    width: 550px;
+    padding-top: 48px;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  h1 {
+    margin-bottom: 24px;
+
+    @include m.breakpoint(desktop) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__buttons {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    @include m.breakpoint(tablet) {
+      flex-direction: row;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 64px;
+
+  @include m.breakpoint(tablet) {
+    margin-bottom: 66px;
+  }
+
+  @include m.breakpoint(desktop) {
+    grid-row: 1;
+    grid-column: 1/4;
+
+    margin-bottom: 62px;
+  }
+}
+
+.gallery {
+  margin-bottom: 64px;
+
+  @include m.breakpoint(tablet) {
+    margin-bottom: 48px;
+  }
+
+  @include m.breakpoint(desktop) {
+    margin-bottom: 80px;
+  }
+}
+
+.about {
   display: flex;
   flex-direction: column;
-  row-gap: f.rem(16);
-  justify-items: center;
+  justify-content: start;
   align-items: center;
+  text-align: center;
+  gap: 22px;
+  margin: 0 24px;
+  margin-bottom: 63px;
+
+  @include m.breakpoint(tablet) {
+    margin: 0 auto;
+    width: 573px;
+    gap: 16px;
+    margin-bottom: 79px;
+  }
+
+  @include m.breakpoint(desktop) {
+    margin-bottom: 71px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+
+    @include m.breakpoint(tablet) {
+      margin: 0 64px;
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    @include m.breakpoint(desktop) {
+      margin: 0 24px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  margin-top: -92px;
+
+  @include m.breakpoint(tablet) {
+    margin-top: -95px;
+  }
+
+  @include m.breakpoint(desktop) {
+    margin-top: -90px;
+    display: grid;
+    grid-template-columns: 500px 485px 1fr;
+    grid-template-rows: 308px;
+  }
+  h2 {
+    margin-top: 92px;
+    margin-bottom: 24px;
+
+    @include m.breakpoint(tablet) {
+      margin-top: 95px;
+      margin-bottom: 30px;
+      width: 500px;
+    }
+
+    @include m.breakpoint(desktop) {
+      margin: 0;
+      margin-top: 116px;
+      text-align: left;
+      width: 336px;
+      align-self: self-start;
+      justify-self: end;
+    }
+  }
+
+  p {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 300px;
+
+    @include m.breakpoint(tablet) {
+      margin-bottom: 37px;
+      width: 573px;
+    }
+
+    @include m.breakpoint(desktop) {
+      margin: 0;
+      margin-top: 116px;
+      text-align: left;
+      width: 346px;
+      align-self: self-start;
+      justify-self: end;
+    }
+  }
+
+  a {
+    margin-bottom: 75px;
+    @include m.breakpoint(tablet) {
+      margin-bottom: 69px;
+    }
+
+    @include m.breakpoint(desktop) {
+      margin: 0;
+      margin-top: 132px;
+      margin-left: 95px;
+      align-self: self-start;
+      justify-self: start;
+    }
+  }
 }

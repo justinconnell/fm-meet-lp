@@ -1,17 +1,40 @@
 @use "../variables" as v;
 @use "../functions" as f;
+@use "../mixins" as m;
 
 .gallery {
-  margin: f.rem(62) f.rem(24);
   display: grid;
+  place-content: center;
   column-gap: f.rem(25);
   row-gap: f.rem(24);
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 151px);
+  grid-template-rows: repeat(2, 143px);
+
+  @include m.breakpoint(tablet) {
+    grid-template-columns: repeat(4, 164px);
+    grid-template-rows: 156px;
+    gap: 12px;
+  }
+
+  @include m.breakpoint(desktop) {
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: 242px;
+    gap: 30px;
+  }
 
   &__img {
     height: f.rem(143);
     width: f.rem(151);
     border-radius: 12px;
+
+    @include m.breakpoint(tablet) {
+      width: 164px;
+      height: 156px;
+    }
+
+    @include m.breakpoint(desktop) {
+      width: 255px;
+      height: 242px;
+    }
   }
 }

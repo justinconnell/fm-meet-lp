@@ -1,6 +1,41 @@
 @use "../variables" as v;
 @use "../functions" as f;
+@use "../mixins" as m;
 
 .footer {
-  margin-top: 32px;
+  background-color: v.$color-dark-cyan;
+  background: linear-gradient(
+      0deg,
+      v.$color-dark-cyan-rgba,
+      v.$color-dark-cyan-rgba
+    ),
+    url("assets/mobile/image-footer.jpg") no-repeat;
+  background-size: cover;
+
+  @include m.breakpoint(tablet) {
+    background: linear-gradient(
+        0deg,
+        v.$color-dark-cyan-rgba,
+        v.$color-dark-cyan-rgba
+      ),
+      url("assets/tablet/image-footer.jpg") no-repeat;
+  }
+
+  @include m.breakpoint(desktop) {
+    background: linear-gradient(
+        0deg,
+        v.$color-dark-cyan-rgba,
+        v.$color-dark-cyan-rgba
+      ),
+      url("assets/desktop/image-footer.jpg") no-repeat top;
+  }
+
+  h2 {
+    color: v.$color-white;
+  }
+
+  p {
+    color: v.$color-white;
+    font-size: 18px;
+  }
 }

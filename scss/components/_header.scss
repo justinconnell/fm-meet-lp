@@ -1,18 +1,1 @@
 @use "../functions" as f;
-
-.header {
-  overflow: hidden;
-
-  &__logo {
-    margin: f.rem(48) auto;
-  }
-  &__hero-img {
-    width: f.rem(414);
-    object-position: f.em(-20);
-    padding: f.em(4) 0;
-  }
-
-  p {
-    margin: f.rem(24);
-  }
-}
